@@ -16,6 +16,7 @@ async function getPost(id: number) {
 }
 
 async function createPost(post: CreatePost) {
+  if (post.createdAt === undefined) post.createdAt = new Date();
   return await postRepository.createPost(post);
 }
 

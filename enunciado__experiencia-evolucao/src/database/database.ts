@@ -11,7 +11,7 @@ const {
 
 const db = new Pool({
   host: HOST,
-  port: parseInt(DB_PORT),
+  port: parseInt(DB_PORT || "5432"),
   user: DB_USER,
   password: DB_PASSWORD,
   database: DB_DATABASE
